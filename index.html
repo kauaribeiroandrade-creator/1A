@@ -5,96 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A História do Futebol</title>
     <style>
-        /* Estilos Gerais */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
             background-color: #f4f7f6;
             color: #333;
+            line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, #1e5631, #4c9a2a);
-            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200') no-repeat center center/cover;
+            color: #fff;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 20px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
         header p {
-            margin: 0.5rem 0 0 0;
-            font-size: 1.1rem;
-            opacity: 0.9;
+            font-size: 1.2rem;
+            font-style: italic;
         }
 
         .container {
             max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
-        /* Seções e Cartões */
         section {
-            background: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
+            background: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         h2 {
-            color: #1e5631;
-            border-bottom: 3px solid #4c9a2a;
-            padding-bottom: 0.5rem;
-            margin-top: 0;
+            color: #2e7d32;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #2e7d32;
+            padding-bottom: 5px;
         }
 
-        /* Linha do Tempo / Tabela */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
         }
 
-        th, td {
-            text-align: left;
-            padding: 0.75rem;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #1e5631;
-            color: white;
-        }
-
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-
-        /* Destaques e Citações */
-        blockquote {
-            background: #e8f5e9;
-            border-left: 5px solid #4c9a2a;
-            margin: 1.5rem 0;
-            padding: 1rem;
+        .highlight-box {
+            background-color: #e8f5e9;
+            border-left: 5px solid #2e7d32;
+            padding: 15px;
+            margin: 20px 0;
             font-style: italic;
         }
 
+        .timeline {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .timeline li {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .timeline li::before {
+            content: "⚽";
+            position: absolute;
+            left: -25px;
+            top: 2px;
+        }
+
+        .timeline strong {
+            color: #2e7d32;
+        }
+
         footer {
+            background-color: #1b5e20;
+            color: #fff;
             text-align: center;
-            padding: 1.5rem;
-            background-color: #222;
-            color: white;
+            padding: 20px;
+            margin-top: 40px;
             font-size: 0.9rem;
-            margin-top: 3rem;
         }
     </style>
 </head>
@@ -108,5 +117,43 @@
     <div class="container">
 
         <section id="origens">
-            <h2>1. As Origens Antigas</h2>
-            <p>Emb
+            <h2>Origens Antigas</h2>
+            <p>Embora o futebol moderno tenha nascido na Inglaterra, a prática de chutar uma bola em direção a um objetivo remonta a milhares de anos. Na China antiga, por volta dos séculos III e II a.C., existia o <strong>Cuju</strong>, um jogo militar onde os soldados chutavam uma bola de couro recheada de penas em uma pequena rede.</p>
+            <p>Outras civilizações também tinham seus jogos: os gregos jogavam o <em>Episkyros</em> e os romanos o <em>Harpastum</em>. Até mesmo nas Américas pré-colombianas, os maias e astecas praticavam variações de jogos com bolas de borracha.</p>
+        </section>
+
+        <section id="inglaterra">
+            <h2>O Berço Moderno: Século XIX</h2>
+            <p>O futebol como conhecemos hoje começou a ganhar forma nas escolas públicas da Inglaterra na década de 1840. Até então, as regras variavam de escola para escola, o que causava muita confusão.</p>
+            
+            <div class="highlight-box">
+                "Em 26 de outubro de 1863, foi fundada a Football Association (FA) em Londres, unificando as regras e separando definitivamente o futebol do rugby."
+            </div>
+
+            <p>Com a criação das regras universais, o esporte se espalhou rapidamente pelas fábricas, ferrovias e comunidades britânicas, tornando-se o esporte do povo.</p>
+        </section>
+
+        <section id="globalizacao">
+            <h2>A Globalização e a FIFA</h2>
+            <p>Marinheiros, engenheiros e estudantes britânicos levaram o futebol para todos os cantos do mundo. O esporte cresceu tanto que exigiu uma organização internacional.</p>
+            
+            <ul class="timeline">
+                <li><strong>1904:</strong> Fundada a FIFA (Federação Internacional de Futebol) em Paris, para gerenciar o esporte globalmente.</li>
+                <li><strong>1930:</strong> Realização da primeira Copa do Mundo no Uruguai, vencida pelos próprios donos da casa.</li>
+                <li><strong>1958:</strong> O mundo conhece Pelé, e o Brasil inicia sua dinastia como o país do futebol.</li>
+            </ul>
+        </section>
+
+        <section id="hoje">
+            <h2>O Futebol Hoje</h2>
+            <p>Hoje, o futebol transcendeu o esporte para se tornar uma indústria bilionária e um fenômeno cultural sem paralelos. Eventos como a Copa do Mundo e a UEFA Champions League param o planeta e unem bilhões de pessoas ao redor de uma única paixão.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - O Almanaque do Futebol. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
